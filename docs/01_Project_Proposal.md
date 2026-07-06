@@ -125,7 +125,7 @@ Future enhancements may include:
 ### AI Assistant
 
 * Ask Career Questions
-* Explain Scam Indicators
+* Explain Scam Indicator
 * Verify Hiring Practices
 
 ### Admin Module
