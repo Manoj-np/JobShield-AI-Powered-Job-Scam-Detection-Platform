@@ -1,8 +1,12 @@
 package com.jobshield.auth.entity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.*;
 import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 
 @Entity
@@ -28,6 +32,10 @@ public class User {
 
 	@Column(name = "phone_number", length = 15)
 	private String phoneNumber;
+	
+	@Column(name = "role", nullable = false)
+	private String role;
+	
 
 	@Column(name = "account_status")
 	private String accountStatus;
@@ -122,7 +130,14 @@ public class User {
 	public void setUpdatedAt(LocalDateTime updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-    
+
+	public String getRole() {
+	    return role;
+	}
+
+	public void setRole(String role) {
+	    this.role = role;
+	}
 
 
 
